@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827">
+<link rel="manifest" href="manifest.json">
+<title>Savan AI</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#f5f7fb;color:#111827}
+.app{max-width:720px;margin:auto;min-height:100vh;display:flex;flex-direction:column}
+header{padding:22px 18px 12px;text-align:center}h1{margin:0;font-size:30px}.sub{color:#6b7280;margin-top:5px}
+.card{margin:10px 16px;padding:18px;background:white;border-radius:22px;box-shadow:0 5px 25px #0000000d}
+#chat{min-height:330px;max-height:52vh;overflow:auto}.msg{padding:12px 14px;margin:9px 0;border-radius:16px;line-height:1.45;white-space:pre-wrap}
+.user{background:#e8eefc;margin-left:15%}.ai{background:#f1f5f9;margin-right:15%}
+.controls{display:flex;gap:10px;align-items:center}.mic{width:72px;height:72px;border-radius:50%;border:0;font-size:30px;background:#111827;color:white}.mic.listening{background:#dc2626}
+button{cursor:pointer}.small{flex:1;padding:12px;border:1px solid #d1d5db;border-radius:12px;background:white}
+input{width:100%;padding:13px;border:1px solid #d1d5db;border-radius:12px;margin-bottom:10px}
+.note{font-size:13px;color:#6b7280}.status{text-align:center;color:#6b7280;margin:10px}
+</style>
+</head>
+<body>
+<div class="app">
+<header><h1>❤️ Savan AI</h1><div class="sub">Friendly • UPSC • Daily Life</div></header>
+<div class="card">
+  <div id="chat"><div class="msg ai">Namaste 😊 Main Savan AI hoon. Mic dabakar mujhse Hindi/Hinglish mein baat kijiye.</div></div>
+  <div class="status" id="status">Ready</div>
+  <div class="controls">
+    <button class="mic" id="mic" aria-label="Speak">🎙️</button>
+    <button class="small" id="stop">🔇 Stop voice</button>
+  </div>
+</div>
+<div class="card">
+  <input id="api" type="password" placeholder="OpenAI API key (sirf local testing; GitHub par save na karein)">
+  <button class="small" id="save">Save key on this device</button>
+  <p class="note">Security: public website mein API key browser mein rakhna safe nahi hai. Production version ke liye secure backend zaroori hai.</p>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
